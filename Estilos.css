@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Fondo degradado romántico */
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+}
+
+.valentines-day-card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background-color: #fff0f3; /* Fondo pastel */
+  overflow: hidden;
+  border: 10px solid #ff6b6b; /* Borde rojo pastel */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.valentines-day-card:before {
+  content: "";
+  position: absolute;
+  background-color: #ff6b6b; /* Rojo pastel */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  top: 140px;
+  left: -30px;
+  box-shadow: 60px 20px #ff6b6b, 130px 10px #ff6b6b, 190px 20px #ff6b6b, 260px -5px #ff6b6b, 340px 20px #ff6b6b;
+}
+
+.valentines-day-card:after {
+  content: "";
+  position: absolute;
+  background-color: #ff8e8e; /* Rojo pastel más claro */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  top: 160px;
+  left: -50px;
+  box-shadow: 50px 20px #ff8e8e, 120px 40px #ff8e8e, 200px 15px #ff8e8e, 260px 30px #ff8e8e, 330px 30px #ff8e8e, 380px 10px #ff8e8e;
+}
+
+.clouds {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff; /* Nubes blancas */
+  z-index: 5;
+  top: 210px;
+  left: -20px;
+  box-shadow: 55px 30px #fff, 125px 10px #fff, 175px 20px #fff, 250px 10px #fff, 320px 5px #fff, 380px 10px #fff;
+}
+
+.hearts {
+  position: absolute;
+  z-index: 2;
+}
+
+.heartOne, .heartTwo, .heartThree, .heartFour, .heartFive {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+.heartOne {
+  left: 100px;
+  top: 250px;
+  animation-delay: 1s;
+}
+
+.heartTwo {
+  left: 270px;
+  top: 230px;
+  animation-delay: 1.8s;
+}
+
+.heartThree {
+  left: 85px;
+  top: 415px;
+  animation-delay: 3s;
+}
+
+.heartFour {
+  left: 320px;
+  top: 380px;
+  animation-delay: 3.5s;
+}
+
+.heartFive {
+  left: 150px;
+  top: 400px;
+  animation-delay: 4.5s;
+}
+
+.right-side:before, .right-side:after,
+.left-side:before, .left-side:after {
+  position: absolute;
+  content: "";
+  transform-origin: center;
+  animation: beat 1s ease infinite;
+}
+
+.right-side:before, .left-side:before {
+  width: 21px;
+  height: 20px;
+  background-color: #ff4d6d; /* Rojo para los corazones */
+  border-radius: 50% 50% 0 50%;
+}
+
+.right-side:after, .left-side:after {
+  width: 21px;
+  height: 20px;
+  background-color: #ff4d6d; /* Rojo para los corazones */
+  border-radius: 50% 50% 50% 0;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.message {
+  background-color: #ff6b6b; /* Rojo pastel */
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message:hover {
+  background-color: #ff4d6d; /* Rojo más intenso al hacer hover */
+}
+
+.text {
+  position: absolute;
+  color: #800f2f; /* Rojo oscuro para el texto */
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  line-height: 1.2;
+  text-align: center;
+  width: 380px;
+  left: 10px;
+  z-index: 3;
+  top: 50px;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&display=swap');
+
+/* Cambiar la fuente del texto */
+.text {
+  position: absolute;
+  color: #800f2f; /* Rojo oscuro para el texto */
+  font-size: 30px;
+  font-family: 'Great Vibes', cursive; /* Fuente romántica */
+  line-height: 1.2;
+  text-align: center;
+  width: 380px;
+  left: 10px;
+  z-index: 3;
+  top: 50px;
+  animation: fadeIn 2s ease forwards;
+}
+
+/* Cambiar la fuente del botón */
+.message {
+  background-color: #ff6b6b; /* Rojo pastel */
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Dancing Script', cursive; /* Fuente romántica */
+  border-radius: 25px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message:hover {
+  background-color: #ff4d6d; /* Rojo más intenso al hacer hover */
+}
